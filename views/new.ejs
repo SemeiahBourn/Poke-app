@@ -9,12 +9,13 @@
   <body>
     <h1><%= pageHeader %></h1>
 
-   <h2> <%= pokemon.name %> </h2>
-
-   <img src=<%= `${pokemon.img}.jpg` %> alt=""  >
-
-   <a href="/pokemon">Back</a>
-   <a href="/pokemon/new">Create New Pokemon</a>
-   <a href="/">Home</a>
+    <form action="/pokemon" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" />
+      <input type="submit" value="Create Pokemon" />
+    </form>
+    
+    <a href="/">Home</a>
+    <a href="/pokemon">Back</a>
   </body>
 </html>
